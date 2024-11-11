@@ -4,7 +4,7 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 # Set up Google Sheets and Google Docs API credentials
-SERVICE_ACCOUNT_FILE = process.env.gcp_client_secret.json
+SERVICE_ACCOUNT_FILE = process.env.GCP_CLIENT_SECRET
 SCOPES = [
     'https://www.googleapis.com/auth/spreadsheets.readonly',
     'https://www.googleapis.com/auth/documents',
@@ -13,11 +13,11 @@ SCOPES = [
 creds = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 # Configuration
-SHEET_ID = 'your_google_sheet_id'
+SHEET_ID = '1lZtro8sLdpx8IozYQUbe-dJFhkacxw8W3RvZf45furo'
 PACKAGE_META_TAB = 'Package_Meta'
 PACKAGE_CONTENTS_TAB = 'Package_Contents'
-TEMPLATE_DOC_ID = 'your_template_doc_id'
-OUTPUT_FOLDER_ID = 'your_drive_folder_id'
+TEMPLATE_DOC_ID = '19VGSJoRY2n1BmyQcqUBuI0aVEJd_1Uh2wHMDB-0FXi8'
+OUTPUT_FOLDER_ID = '1VWF48TKNHBtAfIt1SF9ks1uzmXj02IQj'
 
 def fetch_google_sheet_data(sheet_id, range_name):
     """Fetch data from Google Sheets."""
